@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_right_open",
+  "textures": {
+    "bottom": "figcorp:block/srf_door_bottom",
+    "top": "figcorp:block/srf_door_top"
+  }
+}

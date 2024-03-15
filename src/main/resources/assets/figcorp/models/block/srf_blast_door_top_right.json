@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_right",
+  "textures": {
+    "bottom": "figcorp:block/srf_blast_door_bottom",
+    "top": "figcorp:block/srf_blast_door_top"
+  }
+}

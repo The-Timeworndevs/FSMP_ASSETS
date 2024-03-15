@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "figcorp:block/srf_logo_quartz_west"
+  }
+}

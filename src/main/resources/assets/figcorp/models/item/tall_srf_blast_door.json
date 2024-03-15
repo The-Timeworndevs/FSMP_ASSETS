@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "figcorp:item/tall_srf_blast_door"
+  }
+}

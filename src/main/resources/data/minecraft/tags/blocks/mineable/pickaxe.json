@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "figcorp:srf_logo",
+    "figcorp:srf_plate",
+    "figcorp:short_srf_blast_door",
+    "figcorp:srf_blast_door",
+    "figcorp:tall_srf_blast_door",
+    "figcorp:srf_logo_quartz",
+    "figcorp:short_srf_door",
+    "figcorp:srf_door",
+    "figcorp:tall_srf_door",
+    "figcorp:obsol_block",
+    "figcorp:obsol_neon",
+    "figcorp:obsol_logo",
+    "figcorp:exploit_logo",
+    "figcorp:exploit_plating",
+    "figcorp:exploit_immobile_plating"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "figcorp:block/srf_plate"
+    }
+  }
+}

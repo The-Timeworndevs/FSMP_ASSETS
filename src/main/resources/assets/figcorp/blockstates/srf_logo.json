@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "figcorp:block/srf_logo_east"
+    },
+    "facing=north": {
+      "model": "figcorp:block/srf_logo_north"
+    },
+    "facing=south": {
+      "model": "figcorp:block/srf_logo_south"
+    },
+    "facing=west": {
+      "model": "figcorp:block/srf_logo_west"
+    }
+  }
+}

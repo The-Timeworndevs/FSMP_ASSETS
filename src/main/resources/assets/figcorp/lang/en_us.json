@@ -1,0 +1,20 @@
+{
+  "block.figcorp.srf_logo": "SRF Logo Block",
+  "block.figcorp.srf_plate": "SRF Blastproof Plating Block",
+  "block.figcorp.short_srf_blast_door": "Short SRF Blast Door",
+  "block.figcorp.srf_blast_door": "SRF Blast Door",
+  "block.figcorp.tall_srf_blast_door": "Tall SRF Blast Door",
+  "block.figcorp.srf_logo_quartz": "SRF Chiseled Quartz",
+  "block.figcorp.short_srf_door": "Short SRF Quartz Door",
+  "block.figcorp.srf_door": "SRF Quartz Door",
+  "block.figcorp.tall_srf_door": "Tall SRF Quartz Door",
+  "block.figcorp.tall_srf_door_alt": "Alternate Tall SRF Quartz Door",
+  "block.figcorp.obsol_block": "Obsol Plating Block",
+  "block.figcorp.obsol_neon": "Obsol Neon Block",
+  "block.figcorp.obsol_logo": "Obsol Logo Block",
+  "block.figcorp.exploit_logo": "Exploit Logo Block",
+  "block.figcorp.exploit_plating": "Exploit Blastproof Plating",
+  "block.figcorp.exploit_immobile_plating": "Exploit Immobile Plating",
+  "block.figcorp.kmd_plating": "KMD Industrial Plating",
+  "block.figcorp.kmd_heavy_plating": "KMD Heavy Plating"
+}

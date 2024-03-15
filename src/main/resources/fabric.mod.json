@@ -1,0 +1,39 @@
+{
+	"schemaVersion": 1,
+	"id": "figcorp",
+	"version": "${version}",
+	"name": "Figura Corperation Assets",
+	"description": "A bunch of block for the Figura Modded SMP",
+	"authors": [
+		"VoxelDragon6",
+		"BowBoy1",
+		"Spingot",
+		"BlazerBo1"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": ""
+	},
+	"license": "MIT",
+	"icon": "assets/figcorp/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.timeworndevs.figcorpmain.Main"
+		],
+		"client": [
+			"net.timeworndevs.figcorpclient.Client"
+		]
+	},
+	"mixins": [
+	],
+	"depends": {
+		"fabricloader": ">=0.15.0",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
