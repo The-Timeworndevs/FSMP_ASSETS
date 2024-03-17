@@ -72,14 +72,14 @@ public class CommonBlockRegistry {
 
         try {
             if (ShortDoorBlock != null) {
-                Constructor<ShortDoorBlock> c;
-                c = ShortDoorBlock.getConstructor(FabricBlockSettings.class);
+                Constructor<ShortDoorBlock> c = ShortDoorBlock.getConstructor(AbstractBlock.Settings.class, BlockSetType.class);
                 SHORT_SRF_BLAST_DOOR = FigCorpRegistry.register("short_srf_blast_door", c.newInstance(FabricBlockSettings.of().sounds(BlockSoundGroup.NETHERITE).strength(50, 1200).requiresTool().mapColor(MapColor.WHITE).pistonBehavior(PistonBehavior.BLOCK), BlockSetType.IRON));
-                SHORT_SRF_DOOR = FigCorpRegistry.register("short_srf_door", new ShortDoorBlock(FabricBlockSettings.of().sounds(BlockSoundGroup.STONE).requiresTool().mapColor(MapColor.OFF_WHITE).pistonBehavior(PistonBehavior.DESTROY), BlockSetType.STONE));
+                SHORT_SRF_DOOR = FigCorpRegistry.register("short_srf_door", c.newInstance(FabricBlockSettings.of().sounds(BlockSoundGroup.STONE).requiresTool().mapColor(MapColor.OFF_WHITE).pistonBehavior(PistonBehavior.DESTROY), BlockSetType.STONE));
             }
             if (TallDoorBlock != null) {
-                TALL_SRF_BLAST_DOOR = FigCorpRegistry.register("tall_srf_blast_door", new TallDoorBlock(FabricBlockSettings.of().sounds(BlockSoundGroup.NETHERITE).strength(50, 1200).requiresTool().mapColor(MapColor.WHITE).pistonBehavior(PistonBehavior.BLOCK), BlockSetType.IRON));
-                TALL_SRF_DOOR = FigCorpRegistry.register("tall_srf_door", new TallDoorBlock(FabricBlockSettings.of().sounds(BlockSoundGroup.STONE).strength(5, 5).mapColor(MapColor.OFF_WHITE).pistonBehavior(PistonBehavior.DESTROY), BlockSetType.STONE));
+                Constructor<TallDoorBlock> c = TallDoorBlock.getConstructor(AbstractBlock.Settings.class, BlockSetType.class);
+                TALL_SRF_BLAST_DOOR = FigCorpRegistry.register("tall_srf_blast_door", c.newInstance(FabricBlockSettings.of().sounds(BlockSoundGroup.NETHERITE).strength(50, 1200).requiresTool().mapColor(MapColor.WHITE).pistonBehavior(PistonBehavior.BLOCK), BlockSetType.IRON));
+                TALL_SRF_DOOR = FigCorpRegistry.register("tall_srf_door", c.newInstance(FabricBlockSettings.of().sounds(BlockSoundGroup.STONE).strength(5, 5).mapColor(MapColor.OFF_WHITE).pistonBehavior(PistonBehavior.DESTROY), BlockSetType.STONE));
             }
         } catch (InvocationTargetException | NoSuchMethodException | InstantiationException | IllegalAccessException e) {
             throw new RuntimeException("Failed to initialize optionally-dependent blocks", e);
