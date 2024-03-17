@@ -2,7 +2,7 @@
 	"schemaVersion": 1,
 	"id": "figcorp",
 	"version": "${version}",
-	"name": "Figura Corperation Assets",
+	"name": "Figura Corporation Assets",
 	"description": "A bunch of block for the Figura Modded SMP",
 	"authors": [
 		"VoxelDragon6",
