@@ -30,6 +30,8 @@ public class CommonItemRegistry {
     public static BlockItem KMD_PLATING;
     public static BlockItem KMD_HEAVY_PLATING;
 
+    public static BlockItem TEST_SLIDING_DOOR;
+
     public static void register() {
         SRF_LOGO = FigCorpRegistry.register("srf_logo", new BlockItem(CommonBlockRegistry.SRF_LOGO, new Item.Settings()));
         SRF_BLASTPLATE = FigCorpRegistry.register("srf_plate", new BlockItem(CommonBlockRegistry.SRF_BLASTPLATE, new Item.Settings()));
@@ -52,6 +54,8 @@ public class CommonItemRegistry {
         KMD_PLATING = FigCorpRegistry.register("kmd_plating", new BlockItem(CommonBlockRegistry.KMD_PLATING, new Item.Settings()));
         KMD_HEAVY_PLATING = FigCorpRegistry.register("kmd_heavy_plating", new BlockItem(CommonBlockRegistry.KMD_HEAVY_PLATING, new Item.Settings()));
 
+        TEST_SLIDING_DOOR = FigCorpRegistry.register("test_sliding_door", new BlockItem(CommonBlockRegistry.TEST_SLIDING_DOOR, new Item.Settings()));
+
         addGroups();
     }
 
@@ -73,7 +77,7 @@ public class CommonItemRegistry {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(EXPLOIT_LOGO);});
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(EXPLOIT_PLATING);});
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(EXPLOIT_IMMOBILE_PLATING);});
-        ;
+
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(KMD_PLATING);});
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(KMD_HEAVY_PLATING);});
 

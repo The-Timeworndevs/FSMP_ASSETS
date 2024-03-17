@@ -2,6 +2,7 @@ package net.timeworndevs.figcorpmain.common;
 
 import com.fizzware.dramaticdoors.fabric.blocks.ShortDoorBlock;
 import com.fizzware.dramaticdoors.fabric.blocks.TallDoorBlock;
+import com.simibubi.create.content.decoration.slidingDoor.SlidingDoorBlock;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
@@ -32,6 +33,8 @@ public class CommonBlockRegistry {
     public static Block KMD_PLATING;
     public static Block KMD_HEAVY_PLATING;
 
+    public static Block TEST_SLIDING_DOOR;
+
     public static void register() {
         SRF_LOGO = FigCorpRegistry.register("srf_logo", new GlazedTerracottaBlock(FabricBlockSettings.of().sounds(BlockSoundGroup.NETHERITE).strength(50,1200).requiresTool().mapColor(MapColor.WHITE).pistonBehavior(PistonBehavior.BLOCK)));
         SRF_BLASTPLATE = FigCorpRegistry.register("srf_plate", new Block(FabricBlockSettings.of().sounds(BlockSoundGroup.NETHERITE).strength(50,1200).requiresTool().mapColor(MapColor.WHITE).pistonBehavior(PistonBehavior.BLOCK)));
@@ -53,5 +56,7 @@ public class CommonBlockRegistry {
 
         KMD_PLATING = FigCorpRegistry.register("kmd_plating", new Block(FabricBlockSettings.of().sounds(BlockSoundGroup.NETHERITE).strength(50,1200).requiresTool().mapColor(MapColor.TEAL)));
         KMD_HEAVY_PLATING = FigCorpRegistry.register("kmd_heavy_plating", new Block(FabricBlockSettings.of().sounds(BlockSoundGroup.NETHERITE).strength(50,1200).requiresTool().mapColor(MapColor.TEAL).pistonBehavior(PistonBehavior.BLOCK)));
+
+        TEST_SLIDING_DOOR = FigCorpRegistry.register("test_sliding_door", new SlidingDoorBlock(FabricBlockSettings.of().sounds(BlockSoundGroup.NETHERITE).nonOpaque(), BlockSetType.OAK, false));
     }
 }
