@@ -2,11 +2,9 @@ package net.timeworndevs.figcorpmain.common;
 
 import com.fizzware.dramaticdoors.fabric.blocks.ShortDoorBlock;
 import com.fizzware.dramaticdoors.fabric.blocks.TallDoorBlock;
-import com.simibubi.create.content.decoration.slidingDoor.SlidingDoorBlock;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
-import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.timeworndevs.figcorpmain.init.FigCorpRegistry;
 
@@ -33,7 +31,9 @@ public class CommonBlockRegistry {
     public static Block KMD_PLATING;
     public static Block KMD_HEAVY_PLATING;
 
-    public static Block TEST_SLIDING_DOOR;
+    public static Block CREATE_BB_LOGO;
+
+    //public static Block TEST_SLIDING_DOOR;
 
     public static void register() {
         SRF_LOGO = FigCorpRegistry.register("srf_logo", new GlazedTerracottaBlock(FabricBlockSettings.of().sounds(BlockSoundGroup.NETHERITE).strength(50,1200).requiresTool().mapColor(MapColor.WHITE).pistonBehavior(PistonBehavior.BLOCK)));
@@ -57,6 +57,8 @@ public class CommonBlockRegistry {
         KMD_PLATING = FigCorpRegistry.register("kmd_plating", new Block(FabricBlockSettings.of().sounds(BlockSoundGroup.NETHERITE).strength(50,1200).requiresTool().mapColor(MapColor.TEAL)));
         KMD_HEAVY_PLATING = FigCorpRegistry.register("kmd_heavy_plating", new Block(FabricBlockSettings.of().sounds(BlockSoundGroup.NETHERITE).strength(50,1200).requiresTool().mapColor(MapColor.TEAL).pistonBehavior(PistonBehavior.BLOCK)));
 
-        TEST_SLIDING_DOOR = FigCorpRegistry.register("test_sliding_door", new SlidingDoorBlock(FabricBlockSettings.of().sounds(BlockSoundGroup.NETHERITE).nonOpaque(), BlockSetType.OAK, false));
+        CREATE_BB_LOGO = FigCorpRegistry.register("create_bb_logo", new Block(FabricBlockSettings.of().sounds(BlockSoundGroup.METAL).strength(5.0F, 6.0F).requiresTool().mapColor(MapColor.TERRACOTTA_YELLOW)));
+
+        //TEST_SLIDING_DOOR = FigCorpRegistry.register("test_sliding_door", new SlidingDoorBlock(FabricBlockSettings.of().sounds(BlockSoundGroup.NETHERITE).nonOpaque(), BlockSetType.OAK, false));
     }
 }

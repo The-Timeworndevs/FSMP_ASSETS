@@ -16,5 +16,8 @@
   "block.figcorp.exploit_plating": "Exploit Blastproof Plating",
   "block.figcorp.exploit_immobile_plating": "Exploit Immobile Plating",
   "block.figcorp.kmd_plating": "KMD Industrial Plating",
-  "block.figcorp.kmd_heavy_plating": "KMD Heavy Plating"
+  "block.figcorp.kmd_heavy_plating": "KMD Heavy Plating",
+  "block.figcorp.create_bb_logo": "Brass Brigade Decorated Brass",
+
+  "item.figcorp.create_bb_logo.tooltip": "[Create Version]"
 }

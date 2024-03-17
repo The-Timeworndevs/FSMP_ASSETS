@@ -1,11 +1,11 @@
 package net.timeworndevs.figcorpmain.common;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.timeworndevs.figcorpmain.init.FigCorpRegistry;
+import net.timeworndevs.figcorpmain.item.CreateBBLogoItem;
 
 public class CommonItemRegistry {
 
@@ -30,7 +30,9 @@ public class CommonItemRegistry {
     public static BlockItem KMD_PLATING;
     public static BlockItem KMD_HEAVY_PLATING;
 
-    public static BlockItem TEST_SLIDING_DOOR;
+    public static BlockItem CREATE_BB_LOGO;
+
+    //public static BlockItem TEST_SLIDING_DOOR;
 
     public static void register() {
         SRF_LOGO = FigCorpRegistry.register("srf_logo", new BlockItem(CommonBlockRegistry.SRF_LOGO, new Item.Settings()));
@@ -54,7 +56,9 @@ public class CommonItemRegistry {
         KMD_PLATING = FigCorpRegistry.register("kmd_plating", new BlockItem(CommonBlockRegistry.KMD_PLATING, new Item.Settings()));
         KMD_HEAVY_PLATING = FigCorpRegistry.register("kmd_heavy_plating", new BlockItem(CommonBlockRegistry.KMD_HEAVY_PLATING, new Item.Settings()));
 
-        TEST_SLIDING_DOOR = FigCorpRegistry.register("test_sliding_door", new BlockItem(CommonBlockRegistry.TEST_SLIDING_DOOR, new Item.Settings()));
+        CREATE_BB_LOGO = FigCorpRegistry.register("create_bb_logo", new CreateBBLogoItem(CommonBlockRegistry.CREATE_BB_LOGO, new Item.Settings()));
+
+        //TEST_SLIDING_DOOR = FigCorpRegistry.register("test_sliding_door", new BlockItem(CommonBlockRegistry.TEST_SLIDING_DOOR, new Item.Settings()));
 
         addGroups();
     }
@@ -81,5 +85,6 @@ public class CommonItemRegistry {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(KMD_PLATING);});
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(KMD_HEAVY_PLATING);});
 
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(CREATE_BB_LOGO);});
     }
 }
