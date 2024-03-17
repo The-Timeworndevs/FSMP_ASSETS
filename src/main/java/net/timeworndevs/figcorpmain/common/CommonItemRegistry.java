@@ -5,7 +5,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.timeworndevs.figcorpmain.init.FigCorpRegistry;
-import net.timeworndevs.figcorpmain.item.CreateBBLogoItem;
+import net.timeworndevs.figcorpmain.item.CreateBBItem;
 
 public class CommonItemRegistry {
 
@@ -56,7 +56,7 @@ public class CommonItemRegistry {
         KMD_PLATING = FigCorpRegistry.register("kmd_plating", new BlockItem(CommonBlockRegistry.KMD_PLATING, new Item.Settings()));
         KMD_HEAVY_PLATING = FigCorpRegistry.register("kmd_heavy_plating", new BlockItem(CommonBlockRegistry.KMD_HEAVY_PLATING, new Item.Settings()));
 
-        CREATE_BB_LOGO = FigCorpRegistry.register("create_bb_logo", new CreateBBLogoItem(CommonBlockRegistry.CREATE_BB_LOGO, new Item.Settings()));
+        CREATE_BB_LOGO = FigCorpRegistry.register("create_bb_logo", new CreateBBItem(CommonBlockRegistry.CREATE_BB_LOGO, new Item.Settings()));
 
         //TEST_SLIDING_DOOR = FigCorpRegistry.register("test_sliding_door", new BlockItem(CommonBlockRegistry.TEST_SLIDING_DOOR, new Item.Settings()));
 

@@ -10,10 +10,10 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class CreateBBLogoItem extends BlockItem {
+public class CreateBBItem extends BlockItem {
 
 
-    public CreateBBLogoItem(Block block, Settings settings) {
+    public CreateBBItem(Block block, Settings settings) {
         super(block, settings);
     }
 
