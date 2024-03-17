@@ -2,6 +2,8 @@ package net.timeworndevs.figcorpmain.common;
 
 import com.fizzware.dramaticdoors.fabric.blocks.ShortDoorBlock;
 import com.fizzware.dramaticdoors.fabric.blocks.TallDoorBlock;
+import com.fizzware.dramaticdoors.fabric.blocks.TallSlidingDoorBlock;
+import com.simibubi.create.content.decoration.slidingDoor.SlidingDoorBlock;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
@@ -48,6 +50,8 @@ public class CommonBlockRegistry {
     public static void register() {
         Class<ShortDoorBlock> ShortDoorBlock = tryLink("com.fizzware.dramaticdoors.fabric.blocks.ShortDoorBlock");
         Class<TallDoorBlock>  TallDoorBlock  = tryLink("com.fizzware.dramaticdoors.fabric.blocks.TallDoorBlock");
+        Class<SlidingDoorBlock> SlidingDoorBlock = tryLink("com.simibubi.create.content.decoration.slidingDoor.SlidingDoorBlock");
+        Class<TallSlidingDoorBlock> TallSlidingDoorBlock = tryLink("import com.fizzware.dramaticdoors.fabric.blocks.TallSlidingDoorBlock");
 
         SRF_LOGO = FigCorpRegistry.register("srf_logo", new GlazedTerracottaBlock(FabricBlockSettings.of().sounds(BlockSoundGroup.NETHERITE).strength(50,1200).requiresTool().mapColor(MapColor.WHITE).pistonBehavior(PistonBehavior.BLOCK)));
         SRF_BLASTPLATE = FigCorpRegistry.register("srf_plate", new Block(FabricBlockSettings.of().sounds(BlockSoundGroup.NETHERITE).strength(50,1200).requiresTool().mapColor(MapColor.WHITE).pistonBehavior(PistonBehavior.BLOCK)));
@@ -80,6 +84,12 @@ public class CommonBlockRegistry {
                 Constructor<TallDoorBlock> c = TallDoorBlock.getConstructor(AbstractBlock.Settings.class, BlockSetType.class);
                 TALL_SRF_BLAST_DOOR = FigCorpRegistry.register("tall_srf_blast_door", c.newInstance(FabricBlockSettings.of().sounds(BlockSoundGroup.NETHERITE).strength(50, 1200).requiresTool().mapColor(MapColor.WHITE).pistonBehavior(PistonBehavior.BLOCK), BlockSetType.IRON));
                 TALL_SRF_DOOR = FigCorpRegistry.register("tall_srf_door", c.newInstance(FabricBlockSettings.of().sounds(BlockSoundGroup.STONE).strength(5, 5).mapColor(MapColor.OFF_WHITE).pistonBehavior(PistonBehavior.DESTROY), BlockSetType.STONE));
+            }
+            if (SlidingDoorBlock != null) {
+                //todo add the sliding doors
+            }
+            if (TallSlidingDoorBlock != null) {
+                //todo add tall sliding doors
             }
         } catch (InvocationTargetException | NoSuchMethodException | InstantiationException | IllegalAccessException e) {
             throw new RuntimeException("Failed to initialize optionally-dependent blocks", e);
