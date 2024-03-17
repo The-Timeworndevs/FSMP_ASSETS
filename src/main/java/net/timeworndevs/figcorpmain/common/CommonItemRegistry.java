@@ -6,17 +6,22 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.timeworndevs.figcorpmain.init.FigCorpRegistry;
 import net.timeworndevs.figcorpmain.item.CreateBBItem;
+import org.jetbrains.annotations.Nullable;
 
 public class CommonItemRegistry {
 
     public static BlockItem SRF_LOGO;
     public static BlockItem SRF_BLASTPLATE;
+    @Nullable
     public static BlockItem SHORT_SRF_BLAST_DOOR;
     public static BlockItem SRF_BLAST_DOOR;
+    @Nullable
     public static BlockItem TALL_SRF_BLAST_DOOR;
     public static BlockItem SRF_LOGO_QUARTZ;
+    @Nullable
     public static BlockItem SHORT_SRF_DOOR;
     public static BlockItem SRF_DOOR;
+    @Nullable
     public static BlockItem TALL_SRF_DOOR;
 
     public static BlockItem OBSOL_BLOCK;
@@ -37,13 +42,17 @@ public class CommonItemRegistry {
     public static void register() {
         SRF_LOGO = FigCorpRegistry.register("srf_logo", new BlockItem(CommonBlockRegistry.SRF_LOGO, new Item.Settings()));
         SRF_BLASTPLATE = FigCorpRegistry.register("srf_plate", new BlockItem(CommonBlockRegistry.SRF_BLASTPLATE, new Item.Settings()));
-        SHORT_SRF_BLAST_DOOR = FigCorpRegistry.register("short_srf_blast_door", new BlockItem(CommonBlockRegistry.SHORT_SRF_BLAST_DOOR, new Item.Settings()));
+        if (CommonBlockRegistry.SHORT_SRF_BLAST_DOOR != null)
+            SHORT_SRF_BLAST_DOOR = FigCorpRegistry.register("short_srf_blast_door", new BlockItem(CommonBlockRegistry.SHORT_SRF_BLAST_DOOR, new Item.Settings()));
         SRF_BLAST_DOOR = FigCorpRegistry.register("srf_blast_door", new BlockItem(CommonBlockRegistry.SRF_BLAST_DOOR, new Item.Settings()));
-        TALL_SRF_BLAST_DOOR = FigCorpRegistry.register("tall_srf_blast_door", new BlockItem(CommonBlockRegistry.TALL_SRF_BLAST_DOOR, new Item.Settings()));
+        if (CommonBlockRegistry.TALL_SRF_BLAST_DOOR != null)
+            TALL_SRF_BLAST_DOOR = FigCorpRegistry.register("tall_srf_blast_door", new BlockItem(CommonBlockRegistry.TALL_SRF_BLAST_DOOR, new Item.Settings()));
         SRF_LOGO_QUARTZ = FigCorpRegistry.register("srf_logo_quartz", new BlockItem(CommonBlockRegistry.SRF_LOGO_QUARTZ, new Item.Settings()));
-        SHORT_SRF_DOOR = FigCorpRegistry.register("short_srf_door", new BlockItem(CommonBlockRegistry.SHORT_SRF_DOOR, new Item.Settings()));
+        if (CommonBlockRegistry.SHORT_SRF_DOOR != null)
+            SHORT_SRF_DOOR = FigCorpRegistry.register("short_srf_door", new BlockItem(CommonBlockRegistry.SHORT_SRF_DOOR, new Item.Settings()));
         SRF_DOOR = FigCorpRegistry.register("srf_door", new BlockItem(CommonBlockRegistry.SRF_DOOR, new Item.Settings()));
-        TALL_SRF_DOOR = FigCorpRegistry.register("tall_srf_door", new BlockItem(CommonBlockRegistry.TALL_SRF_DOOR, new Item.Settings()));
+        if (CommonBlockRegistry.TALL_SRF_DOOR != null)
+            TALL_SRF_DOOR = FigCorpRegistry.register("tall_srf_door", new BlockItem(CommonBlockRegistry.TALL_SRF_DOOR, new Item.Settings()));
 
         OBSOL_BLOCK = FigCorpRegistry.register("obsol_block", new BlockItem(CommonBlockRegistry.OBSOL_BLOCK, new Item.Settings()));
         OBSOL_NEON = FigCorpRegistry.register("obsol_neon", new BlockItem(CommonBlockRegistry.OBSOL_NEON, new Item.Settings()));
