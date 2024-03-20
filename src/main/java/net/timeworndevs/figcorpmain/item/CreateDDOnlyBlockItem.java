@@ -10,10 +10,9 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class CreateBBItem extends BlockItem {
+public class CreateDDOnlyBlockItem extends BlockItem {
 
-
-    public CreateBBItem(Block block, Settings settings) {
+    public CreateDDOnlyBlockItem(Block block, Settings settings) {
         super(block, settings);
     }
 
@@ -22,6 +21,7 @@ public class CreateBBItem extends BlockItem {
 
         // default white text
         tooltip.add(Text.translatable("item.figcorp.create_bb_logo.tooltip").formatted(Formatting.GRAY));
+        tooltip.add(Text.translatable("item.figcorp.dd_only_item.tooltip").formatted(Formatting.GRAY));
 
     }
 }

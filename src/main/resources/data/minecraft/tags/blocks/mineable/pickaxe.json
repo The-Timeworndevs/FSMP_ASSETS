@@ -15,6 +15,10 @@
     "figcorp:obsol_logo",
     "figcorp:exploit_logo",
     "figcorp:exploit_plating",
-    "figcorp:exploit_immobile_plating"
+    "figcorp:exploit_immobile_plating",
+    "figcorp:kmd_plating",
+    "figcorp:kmd_heavy_plating",
+    "figcorp:create_bb_logo",
+    "figcorp:blue_metal_logo"
   ]
 }

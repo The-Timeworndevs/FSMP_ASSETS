@@ -15,10 +15,12 @@ public class Main implements ModInitializer {
 	@Override
 	public void onInitialize() {
 
-		LOGGER.info("Hello Fabric world!");
+		LOGGER.info("Figcorp Registering...");
 
 		CommonBlockRegistry.register();
 		CommonItemRegistry.register();
+
+		LOGGER.info("Figcorp Registered!");
 	}
 
 	public static @Nullable Class tryLink(String className) {

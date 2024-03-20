@@ -5,7 +5,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.timeworndevs.figcorpmain.init.FigCorpRegistry;
-import net.timeworndevs.figcorpmain.item.CreateBBItem;
+import net.timeworndevs.figcorpmain.item.CreateOnlyBlockItem;
 import org.jetbrains.annotations.Nullable;
 
 public class CommonItemRegistry {
@@ -35,9 +35,14 @@ public class CommonItemRegistry {
     public static BlockItem KMD_PLATING;
     public static BlockItem KMD_HEAVY_PLATING;
 
+    @Nullable
     public static BlockItem CREATE_BB_LOGO;
+    @Nullable
+    public static BlockItem CREATE_BB_LOGO_CASING;
+    @Nullable
+    public static BlockItem CREATE_BB_BRASS_DOOR;
 
-    //public static BlockItem TEST_SLIDING_DOOR;
+    public static BlockItem BLUE_METAL_LOGO;
 
     public static void register() {
         SRF_LOGO = FigCorpRegistry.register("srf_logo", new BlockItem(CommonBlockRegistry.SRF_LOGO, new Item.Settings()));
@@ -65,9 +70,15 @@ public class CommonItemRegistry {
         KMD_PLATING = FigCorpRegistry.register("kmd_plating", new BlockItem(CommonBlockRegistry.KMD_PLATING, new Item.Settings()));
         KMD_HEAVY_PLATING = FigCorpRegistry.register("kmd_heavy_plating", new BlockItem(CommonBlockRegistry.KMD_HEAVY_PLATING, new Item.Settings()));
 
-        CREATE_BB_LOGO = FigCorpRegistry.register("create_bb_logo", new CreateBBItem(CommonBlockRegistry.CREATE_BB_LOGO, new Item.Settings()));
 
-        //TEST_SLIDING_DOOR = FigCorpRegistry.register("test_sliding_door", new BlockItem(CommonBlockRegistry.TEST_SLIDING_DOOR, new Item.Settings()));
+
+        if (CommonBlockRegistry.CREATE_BB_LOGO != null)
+            CREATE_BB_LOGO = FigCorpRegistry.register("create_bb_logo", new CreateOnlyBlockItem(CommonBlockRegistry.CREATE_BB_LOGO, new Item.Settings()));
+        if (CommonBlockRegistry.CREATE_BB_LOGO_CASING != null)
+            CREATE_BB_LOGO_CASING = FigCorpRegistry.register("create_bb_logo_casing", new CreateOnlyBlockItem(CommonBlockRegistry.CREATE_BB_LOGO_CASING, new Item.Settings()));
+        if (CommonBlockRegistry.CREATE_BB_BRASS_DOOR != null)
+            CREATE_BB_BRASS_DOOR = FigCorpRegistry.register("create_bb_brass_door", new CreateOnlyBlockItem(CommonBlockRegistry.CREATE_BB_BRASS_DOOR, new Item.Settings()));
+        BLUE_METAL_LOGO = FigCorpRegistry.register("blue_metal_logo", new BlockItem(CommonBlockRegistry.BLUE_METAL_LOGO, new Item.Settings()));
 
         addGroups();
     }
@@ -95,5 +106,9 @@ public class CommonItemRegistry {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(KMD_HEAVY_PLATING);});
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(CREATE_BB_LOGO);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(CREATE_BB_LOGO_CASING);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(CREATE_BB_BRASS_DOOR);});
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(BLUE_METAL_LOGO);});
     }
 }

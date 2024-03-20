@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "figcorp:block/create_bb_logo_casing"
+    }
+  }
+}
