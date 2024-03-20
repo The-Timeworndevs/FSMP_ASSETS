@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
-      "model": "figcorp:block/create_bb_logo_casing"
+    "facing=east": {
+      "model": "figcorp:block/create_bb_logo_casing_east"
+    },
+    "facing=north": {
+      "model": "figcorp:block/create_bb_logo_casing_north"
+    },
+    "facing=south": {
+      "model": "figcorp:block/create_bb_logo_casing_south"
+    },
+    "facing=west": {
+      "model": "figcorp:block/create_bb_logo_casing_west"
     }
   }
 }

@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
-      "model": "figcorp:block/create_bb_logo"
+    "facing=east": {
+      "model": "figcorp:block/create_bb_logo_east"
+    },
+    "facing=north": {
+      "model": "figcorp:block/create_bb_logo_north"
+    },
+    "facing=south": {
+      "model": "figcorp:block/create_bb_logo_south"
+    },
+    "facing=west": {
+      "model": "figcorp:block/create_bb_logo_west"
     }
   }
 }

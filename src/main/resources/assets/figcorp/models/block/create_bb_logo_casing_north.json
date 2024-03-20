@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "figcorp:block/create_bb_logo_casing_north"
+  }
+}
