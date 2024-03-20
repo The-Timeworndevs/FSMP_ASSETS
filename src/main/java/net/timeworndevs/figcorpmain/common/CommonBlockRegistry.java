@@ -74,7 +74,7 @@ public class CommonBlockRegistry {
         OBSOL_NEON = FigCorpRegistry.register("obsol_neon", new Block(FabricBlockSettings.of().sounds(BlockSoundGroup.NETHERITE).strength(50,1200).requiresTool().mapColor(MapColor.GRAY).luminance(15)));
         OBSOL_LOGO = FigCorpRegistry.register("obsol_logo", new Block(FabricBlockSettings.of().sounds(BlockSoundGroup.NETHERITE).strength(50,1200).requiresTool().mapColor(MapColor.GRAY)));
 
-        EXPLOIT_LOGO = FigCorpRegistry.register("exploit_logo", new Block(FabricBlockSettings.of().sounds(BlockSoundGroup.NETHERITE).strength(50, 1200).requiresTool().mapColor(MapColor.MAGENTA)));
+        EXPLOIT_LOGO = FigCorpRegistry.register("exploit_logo", new GlazedTerracottaBlock(FabricBlockSettings.of().sounds(BlockSoundGroup.NETHERITE).strength(50, 1200).requiresTool().mapColor(MapColor.MAGENTA)));
         EXPLOIT_PLATING = FigCorpRegistry.register("exploit_plating", new Block(FabricBlockSettings.of().sounds(BlockSoundGroup.NETHERITE).strength(50,1200).requiresTool().mapColor(MapColor.MAGENTA)));
         EXPLOIT_IMMOBILE_PLATING = FigCorpRegistry.register("exploit_immobile_plating", new Block(FabricBlockSettings.of().sounds(BlockSoundGroup.NETHERITE).strength(50,1200).requiresTool().mapColor(MapColor.MAGENTA).pistonBehavior(PistonBehavior.BLOCK)));
 
