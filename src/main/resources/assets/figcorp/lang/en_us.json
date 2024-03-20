@@ -19,6 +19,7 @@
   "block.figcorp.kmd_heavy_plating": "KMD Heavy Plating",
   "block.figcorp.create_bb_logo": "Brass Brigade Decorated Brass",
   "block.figcorp.create_bb_logo_casing": "Brass Brigade Decorated Brass Casing",
+  "block.figcorp.blue_metal_logo": "Blue Metal Logo",
 
   "item.figcorp.create_only_item.tooltip": "[Create Version]",
   "item.figcorp.dd_only_item.tooltip": "[Dramatic Doors Version]"

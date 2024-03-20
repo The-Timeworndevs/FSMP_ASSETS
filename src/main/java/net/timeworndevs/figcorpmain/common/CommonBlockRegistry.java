@@ -46,13 +46,14 @@ public class CommonBlockRegistry {
 
     public static Block KMD_PLATING;
     public static Block KMD_HEAVY_PLATING;
+    public static Block KMD_LOGO;
 
     @Nullable
     public static Block CREATE_BB_LOGO;
     @Nullable
     public static Block CREATE_BB_LOGO_CASING;
     @Nullable
-    public static SlidingDoorBlock CREATE_BB_BRASS_DOOR;
+    public static Block CREATE_BB_BRASS_DOOR;
 
     public static Block BLUE_METAL_LOGO;
 
@@ -80,6 +81,8 @@ public class CommonBlockRegistry {
 
         KMD_PLATING = FigCorpRegistry.register("kmd_plating", new Block(FabricBlockSettings.of().sounds(BlockSoundGroup.NETHERITE).strength(50,1200).requiresTool().mapColor(MapColor.TEAL)));
         KMD_HEAVY_PLATING = FigCorpRegistry.register("kmd_heavy_plating", new Block(FabricBlockSettings.of().sounds(BlockSoundGroup.NETHERITE).strength(50,1200).requiresTool().mapColor(MapColor.TEAL).pistonBehavior(PistonBehavior.BLOCK)));
+        KMD_LOGO = FigCorpRegistry.register("kmd_logo", new GlazedTerracottaBlock(FabricBlockSettings.of().sounds(BlockSoundGroup.NETHERITE).strength(50,1200).requiresTool().mapColor(MapColor.TEAL)));
+
 
         try {
             if (ShortDoorBlock != null) {

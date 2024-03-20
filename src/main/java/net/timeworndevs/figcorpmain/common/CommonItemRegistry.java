@@ -6,6 +6,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.timeworndevs.figcorpmain.init.FigCorpRegistry;
 import net.timeworndevs.figcorpmain.item.CreateOnlyBlockItem;
+import net.timeworndevs.figcorpmain.item.DramaticDoorsOnlyBlockItem;
 import org.jetbrains.annotations.Nullable;
 
 public class CommonItemRegistry {
@@ -34,6 +35,7 @@ public class CommonItemRegistry {
 
     public static BlockItem KMD_PLATING;
     public static BlockItem KMD_HEAVY_PLATING;
+    public static BlockItem KMD_LOGO;
 
     @Nullable
     public static BlockItem CREATE_BB_LOGO;
@@ -48,16 +50,16 @@ public class CommonItemRegistry {
         SRF_LOGO = FigCorpRegistry.register("srf_logo", new BlockItem(CommonBlockRegistry.SRF_LOGO, new Item.Settings()));
         SRF_BLASTPLATE = FigCorpRegistry.register("srf_plate", new BlockItem(CommonBlockRegistry.SRF_BLASTPLATE, new Item.Settings()));
         if (CommonBlockRegistry.SHORT_SRF_BLAST_DOOR != null)
-            SHORT_SRF_BLAST_DOOR = FigCorpRegistry.register("short_srf_blast_door", new BlockItem(CommonBlockRegistry.SHORT_SRF_BLAST_DOOR, new Item.Settings()));
+            SHORT_SRF_BLAST_DOOR = FigCorpRegistry.register("short_srf_blast_door", new DramaticDoorsOnlyBlockItem(CommonBlockRegistry.SHORT_SRF_BLAST_DOOR, new Item.Settings()));
         SRF_BLAST_DOOR = FigCorpRegistry.register("srf_blast_door", new BlockItem(CommonBlockRegistry.SRF_BLAST_DOOR, new Item.Settings()));
         if (CommonBlockRegistry.TALL_SRF_BLAST_DOOR != null)
-            TALL_SRF_BLAST_DOOR = FigCorpRegistry.register("tall_srf_blast_door", new BlockItem(CommonBlockRegistry.TALL_SRF_BLAST_DOOR, new Item.Settings()));
+            TALL_SRF_BLAST_DOOR = FigCorpRegistry.register("tall_srf_blast_door", new DramaticDoorsOnlyBlockItem(CommonBlockRegistry.TALL_SRF_BLAST_DOOR, new Item.Settings()));
         SRF_LOGO_QUARTZ = FigCorpRegistry.register("srf_logo_quartz", new BlockItem(CommonBlockRegistry.SRF_LOGO_QUARTZ, new Item.Settings()));
         if (CommonBlockRegistry.SHORT_SRF_DOOR != null)
-            SHORT_SRF_DOOR = FigCorpRegistry.register("short_srf_door", new BlockItem(CommonBlockRegistry.SHORT_SRF_DOOR, new Item.Settings()));
+            SHORT_SRF_DOOR = FigCorpRegistry.register("short_srf_door", new DramaticDoorsOnlyBlockItem(CommonBlockRegistry.SHORT_SRF_DOOR, new Item.Settings()));
         SRF_DOOR = FigCorpRegistry.register("srf_door", new BlockItem(CommonBlockRegistry.SRF_DOOR, new Item.Settings()));
         if (CommonBlockRegistry.TALL_SRF_DOOR != null)
-            TALL_SRF_DOOR = FigCorpRegistry.register("tall_srf_door", new BlockItem(CommonBlockRegistry.TALL_SRF_DOOR, new Item.Settings()));
+            TALL_SRF_DOOR = FigCorpRegistry.register("tall_srf_door", new DramaticDoorsOnlyBlockItem(CommonBlockRegistry.TALL_SRF_DOOR, new Item.Settings()));
 
         OBSOL_BLOCK = FigCorpRegistry.register("obsol_block", new BlockItem(CommonBlockRegistry.OBSOL_BLOCK, new Item.Settings()));
         OBSOL_NEON = FigCorpRegistry.register("obsol_neon", new BlockItem(CommonBlockRegistry.OBSOL_NEON, new Item.Settings()));
@@ -69,7 +71,7 @@ public class CommonItemRegistry {
 
         KMD_PLATING = FigCorpRegistry.register("kmd_plating", new BlockItem(CommonBlockRegistry.KMD_PLATING, new Item.Settings()));
         KMD_HEAVY_PLATING = FigCorpRegistry.register("kmd_heavy_plating", new BlockItem(CommonBlockRegistry.KMD_HEAVY_PLATING, new Item.Settings()));
-
+        KMD_LOGO = FigCorpRegistry.register("kmd_logo", new BlockItem(CommonBlockRegistry.KMD_LOGO, new Item.Settings()));
 
 
         if (CommonBlockRegistry.CREATE_BB_LOGO != null)
@@ -78,6 +80,7 @@ public class CommonItemRegistry {
             CREATE_BB_LOGO_CASING = FigCorpRegistry.register("create_bb_logo_casing", new CreateOnlyBlockItem(CommonBlockRegistry.CREATE_BB_LOGO_CASING, new Item.Settings()));
         if (CommonBlockRegistry.CREATE_BB_BRASS_DOOR != null)
             CREATE_BB_BRASS_DOOR = FigCorpRegistry.register("create_bb_brass_door", new CreateOnlyBlockItem(CommonBlockRegistry.CREATE_BB_BRASS_DOOR, new Item.Settings()));
+
         BLUE_METAL_LOGO = FigCorpRegistry.register("blue_metal_logo", new BlockItem(CommonBlockRegistry.BLUE_METAL_LOGO, new Item.Settings()));
 
         addGroups();
@@ -104,6 +107,7 @@ public class CommonItemRegistry {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(KMD_PLATING);});
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(KMD_HEAVY_PLATING);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(KMD_LOGO);});
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(CREATE_BB_LOGO);});
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(CREATE_BB_LOGO_CASING);});
